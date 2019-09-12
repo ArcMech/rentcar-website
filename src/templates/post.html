@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/post.css'%} " />
+<link rel="stylesheet" href="{% static 'css/nav.css'%} " />
+{% endblock style %}
+
+{% block content %}
+
+
+<section class="hero-post">
+    <div class="hero-image">
+        <img src="{{ post.thumbnail.url}}" alt="">
+    </div>
+    <div class="post-container">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content|linebreaks }}</p>
+    </div>
+    <div class="button-wrapper">
+        <button><a href="{{ base_url }}">Wróć do bloga</a></button>
+    </div>
+</section>
+
+{% endblock content %}

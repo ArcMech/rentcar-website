@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/blog.css'%} " />
+{% endblock style %}
+{% block content %}
+
+
+
+<section class="help hero">
+    <h1>Potrzebujesz pomocy?<br><span>Pomożemy!</span></h1>
+    <br>
+    <h4>Samochód zastępczy z OC sprawcy!</h4>
+    <div class="button-wrapper">
+        <button><i class="fa fa-phone fa-3x"></i><a class="phone" href="#">575 590 929</a></button>
+    </div>
+    <div class="hero-container">
+        <img src="{% static 'img/ups.jpg' %}" alt="">
+    </div>
+
+    <div class="overlay"></div>
+
+</section>
+
+{% endblock content %}

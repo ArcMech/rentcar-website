@@ -1,0 +1,22 @@
+@mixin primary-btn
+    padding: 15px 30px
+    background: $red
+    font-size: 18px
+    text-transform: uppercase
+    letter-spacing: 2px
+    border: none
+    color: #fff
+    font-weight: bold
+    display: flex
+    margin: auto
+    margin-bottom: 20px
+    text-align: center
+
+.primary-btn
+    @include primary-btn
+
+.primary-btn:hover
+    @include primary-btn
+    background: #BB2B2B
+    cursor: pointer
+

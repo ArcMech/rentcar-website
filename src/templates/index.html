@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/nav.css'%} " />
+<link rel="stylesheet" href="{% static 'css/style.css'%} " />
+
+{% endblock style %}
+{% block content %}
+
+<section class="hero">
+  <h1>Wypożyczamy.<br><span>-MAPACARS-</span></h1>
+  <div class="hero-container">
+    <img src="{% static 'img/img2.jpg' %}" alt="">
+  </div>
+
+</section>
+<h1>Dokładamy największych starań,<br> aby nasi klienci byli zadowoleni.</h1>
+
+<section class="services">
+
+  <div class="services-container">
+    <div class="column">
+      <img src="{% static 'img/brum.jpg' %}" alt="">
+      <h4>Wypożyczanie samochodów</h4>
+      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I
+        will give you a complete account of the system.</p>
+      <a href="/shop"><button class="primary-btn">Sprawdź</button></a>
+    </div>
+    <div class="column">
+      <img src="{% static 'img/ups.jpg' %}" alt="">
+      <h4>Pomoc drogowa</h4>
+      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I
+        will give you a complete account of the system.</p>
+      <a href="/contact"><button class="primary-btn">Kontakt</button></a>
+    </div>
+  </div>
+</section>
+<section class="contact">
+  <div class="contact-container">
+
+
+    <div class="phone-container">
+      <h2>ZADZWOŃ!</h2>
+      <span>
+
+        <i class="fa fa-phone fa-3x"></i>
+        <h2>575 590 929</h2>
+      </span>
+
+    </div>
+
+
+  </div>
+</section>
+<h1>Nasz miniblog</h1>
+<p class="miniblog-p">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+  was born.But I must
+  explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.But I must explain to
+  you how all this mistaken idea of denouncing pleasure and praising pain was born.</p>
+<section class="blog">
+
+  <div class="blog-container">
+    {% for obj in object_list  %}
+    <div class="column">
+      <img src="{{ obj.thumbnail.url }}" alt="">
+      <div class="text-container">
+        <h4>{{ obj.title }}</h4>
+        <p>{{ obj.overview|truncatechars:100 }}</p>
+        <a class="blog-link" href=" {{ obj.get_absolute_url }}">przejdź do bloga</a>
+      </div>
+    </div>
+    {% endfor %}
+
+
+  </div>
+  </div>
+</section>
+
+{% endblock content %}

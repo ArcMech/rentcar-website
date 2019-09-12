@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style.css'%} " />
+{% endblock style %}
+{% block content %}
+<section class="shop-container">
+
+    {% for shop_item in shop %}
+    <div class="shop-item">
+        <div class="shop-item-image">
+            <img src="{{ shop_item.car_img.url  }}" alt="">
+            <div class="shop-item-image-tag">
+                <span>od {{ shop_item.price }} zł</span>
+            </div>
+        </div>
+        <div class="shop-item-info">
+            <h2 class="center">{{ shop_item.name }}</h2 class="center">
+            <span>Miejsca: {{ shop_item.seats }}</span>
+            <span>Drzwi: {{ shop_item.doors }}</span>
+            {% if shop_item %}
+            <span>Klimatyzacja: Tak</span>
+            {% else %}
+            <span>Klimatyzacja: Nie</span>
+            {% endif %}
+            <span>Skrzynia biegów: {{ shop_item.gridbox }}</span>
+            <span>Paliwo: {{ shop_item.petrol }}</span>
+            <a href=tel:+48575590929><button class="primary-btn">Tel: 575 254 254</button></a>
+        </div>
+
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <div class="logo">
+            <img src="../img/logo.png" alt="MAPA-CARS">
+        </div>
+
+        <p class="footer-links">
+            <a href="#">Wypożyczanie</a>
+
+            <a href="#">Pomoc Drogowa</a>
+
+            <a href="#">Blog</a>
+
+            <a href="#">Kontakt</a>
+
+        </p>
+
+        <p class="footer-company-name">-MAPACARS- &copy; 2019</p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>ul. Cosiowa 23</span> Jaworzno</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>152 121 121</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>O nas</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+            vehicula sit amet.
+        </p>
+
+        <div class="footer-icons">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+
+        </div>
+
+    </div>
+
+</footer>
+</body>
+
+</html>

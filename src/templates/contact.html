@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style.css'%} " />
+{% endblock style %}
+{% block content %}
+
+
+
+<section class="container">
+    <h1>Kontakt</h1>
+    <div class="mapa-container">
+        <div class="mapa">
+            <div style="width: 700px;position: relative;"><iframe width="100%" height="100%"
+                    src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Jaworzno%2C%20Brzozowa%2015+(MapaCars)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <div
+                    style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;">
+                    <small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a
+                            href="http://www.googlemapsgenerator.com/pl/">googlemapsgenerator.com/pl/</a> & <a
+                            href="https://vaticaanstadtickets.nl/de-tien-beste-dingen-om-te-doen-in-vaticaanstad-rome/">www.vaticaanstadtickets.nl/de-tien-beste-dingen-om-te-doen-in-vaticaanstad-rome/</a></small>
+                </div>
+                <style>
+                    #gmap_canvas img {
+                        max-width: none !important;
+                        background: none !important
+                    }
+                </style>
+            </div><br />
+        </div>
+        <div class="mapa-info">
+            <div class="mapa-info-details">
+                <h2>Dane kontaktowe</h2>
+                <br>
+                <p>MapaCars sp. z o.o.</p>
+                <p>ul. Brzozowa 15, 43-600 Jaworzno</p>
+                <p>tel: 575 590 929</p>
+                <p>mail: carsmapa@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+{% endblock content %}

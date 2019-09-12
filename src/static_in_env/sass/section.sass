@@ -1,0 +1,310 @@
+.hero
+    
+    position: relative
+    text-align: center
+    height: auto
+    width: 100%
+    margin-bottom: 20px
+    // top: 100px
+    
+    img
+        width: 100%
+        height: calc(100vh - 100px)
+        
+
+    .title
+        font-family: 'Open Sans', sans-serif
+        position: absolute
+        font-size: 4em
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        color: #fff
+        font-weight: 400
+
+
+        span    
+            color: $red
+            font-weight: 900
+            letter-spacing: -2px
+
+@media (max-width: 900px)
+    .hero
+        img
+            height: auto
+        .title
+            margin: auto
+            top: calc(40vh - 50px)
+            font-size: 3em
+
+@media (max-width: 550px)
+    .hero
+        .title
+            margin: auto
+            top: calc(30vh - 50px)
+            font-size: 2em
+
+@media (max-width: 420px)
+    .hero
+        .title
+            margin: auto
+            top: calc(23vh - 50px)
+            font-size: 2em
+
+
+.services
+    width: 100%
+    height: auto
+    padding: 40px 40px
+    display: flex
+    
+
+
+    .services-container
+        width: 100%
+        flex-wrap: wrap
+        flex-direction: row
+        display: flex
+        justify-content: space-around
+        
+
+        .column
+            width: 100%
+            max-width: 600px
+            min-width: 400px
+            height: auto
+            margin-bottom: 40px
+
+            img
+                width: 100%
+                min-height: 300px
+
+            p
+                padding: 2em
+                text-align: justify
+
+            
+
+
+@media (max-width: 800px)
+    .services
+        padding: 40px 10px
+        .services-container
+            .column
+                max-width: 400px
+                p
+                    padding: 2em 
+                    text-align: justify
+
+
+.blog
+    width: 100%
+    height: auto
+    padding: 40px 40px
+    display: flex
+    
+
+
+    .blog-container
+        width: 100%
+        flex-wrap: wrap
+        flex-direction: row
+        display: flex
+        justify-content: space-around
+        
+
+        .column
+            width: 100%
+            max-width: 400px
+            min-width: 300px
+            height: auto
+            margin-bottom: 40px
+            position: relative
+            margin: 10px 5px
+
+            img
+                width: 100%
+                min-height: 300px
+
+
+            .text-container
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(27, 28, 30, 1) 100%)
+                padding: 10px
+                width: 100%
+                height: auto
+                position: absolute
+                bottom: 0
+                left: 0
+                h4
+                    padding: 0 20px
+                    text-align: left
+                    font-size: 1.3em
+                    letter-spacing: -1px
+                p   
+                    height: auto
+                    padding: 10px 20px
+                    font-weight: 200
+                    padding-bottom: 10px
+                    text-align: left
+                    color: #ededed
+                    font-size: 0.9em
+                    line-height: 1
+
+                .blog-link
+                    padding: 10px 20px 0 20px
+                    margin-bottom: 20px
+                    font-size: 0.9em
+                    text-transform: uppercase
+                    float: right
+
+
+            
+
+
+@media (max-width: 800px)
+    .blog
+        padding: 40px 10px
+        .blog-container
+            .column
+                max-width: 300px
+                img
+                    min-height: 200px
+                .text-container
+                    h4
+                        font-size: 1em
+                        font-weight: 900
+                    p
+                        font-size: 0.8em
+                    .blog-link
+                        padding: 0 20px
+                        margin-bottom: 5px
+
+
+.contact
+    min-height: 100px
+    height: auto
+    width: 100%
+    margin-bottom: 30px
+    
+    .contact-container
+        background: $red
+        width: 100%
+        flex-wrap: wrap
+        flex-direction: row
+        height: auto
+        display: flex
+        align-items: center
+        justify-content: center
+        
+        .phone-container
+            display: inline-flex
+            align-items: center
+            width: 100%
+            justify-content: center
+
+            span
+                display: inline-flex
+                align-items: center
+                width: fit-content
+                i
+                    padding: 0.5em
+
+        @media (max-width: 420px )
+            .phone-container
+                display: block
+                text-align: center
+                padding: 20px
+
+                h2
+                    font-size: 2em
+
+                span
+                    i
+                        padding: 0 0.5em 0 0
+
+            
+
+.shop-container
+    width: 100%
+    height: auto
+    min-height: 50vh
+    background: #fbfbfb
+    display: flex
+    justify-content: center
+    margin: auto
+    padding: 20px
+    flex-wrap: wrap
+    flex-direction: column
+
+    .shop-item
+        width: fit-content
+        justify-content: center
+        margin: auto
+        flex-wrap: wrap
+        flex-direction: row
+        display: flex
+        margin-bottom: 20px
+        box-shadow: 2px 2px 12px -8px black
+        
+    
+        .shop-item-image
+            position: relative
+            background: #fff
+            height: 300px
+            width: 400px
+            
+
+
+            img
+                width: 100%
+                height: auto
+            
+            .shop-item-image-tag
+                top: 0
+                right: 0
+                position: absolute
+                width: 140px
+                height: 40px
+                background: $red
+                display: flex
+                justify-content: center
+
+                
+                span
+                    text-transform: uppercase
+                    letter-spacing: 2px
+                    color: #fff
+                    font-weight: 900
+                    padding: 10px
+
+            
+
+        .shop-item-info
+            background: #fff
+            height: 300px
+            width: 400px
+            padding: 20px 40px
+
+            h2
+                padding-bottom: 5px
+                color: $red
+                font-weight: 900
+
+            span
+                font-size: 1.2rem
+                font-weight: 700    
+                display: block
+
+            .primary-btn
+                margin-top: 30px
+
+@media (max-width: 720px)
+    .shop-container
+        padding: 40px 0
+        .shop-item
+            .shop-item-info, .shop-item-image
+                max-width: 370px
+
+                
+            .shop-item-info
+                padding: 20px 40px

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/blog.css'%}">
+{% endblock style %}
+{% block content %}
+
+
+<section class="hero">
+    <h1>Blogujemy.<br><span>-MAPACARS-</span></h1>
+    <div class="hero-container">
+        <img src="{% static 'img/parking.jpg' %}" alt="">
+    </div>
+
+</section>
+
+<section class="post-list">
+    {% for post in post_list %}
+    <div class="post">
+        <div class="post-image"><img src="{{ post.thumbnail.url }}" alt=""></div>
+        <div class="post-text">
+            <a href="{{ post.get_absolute_url }}">{{post.title}}</a>
+            <p class="description">{{post.overview|truncatechars:100}}</p>
+        </div>
+
+    </div>
+    {% endfor %}
+</section>
+{% endblock content %}
